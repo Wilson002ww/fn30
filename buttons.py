@@ -6,5 +6,6 @@ def menu():
     btn2=KeyboardButton("Xorror")
     btn3=KeyboardButton("Dramma")
     btn4=KeyboardButton("Boevik")
-    markup.add(btn1,btn4,btn3,btn2)
+    btn5=KeyboardButton("detecktive ")
+    markup.add(btn1,btn4,btn3,btn2,btn5)
     return markup
