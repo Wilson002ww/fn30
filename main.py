@@ -1,8 +1,13 @@
 from telebot import TeleBot
-
+from telebot.types import Message
 TOKEN='8017381723:AAEKB78sAYh3CGgRE-eFN-IcrGeHBbv3O4o'
 
 bot=TeleBot(TOKEN)
+@bot.message_handler(commands=["/start"])
+def reaction_to_start(message:Message):
+    chat_id=message.chat.id
+    bot.send_message(chat_id,f"Hello!")
+
 
 if __name__=="__main__":
     bot.infinity_polling()
