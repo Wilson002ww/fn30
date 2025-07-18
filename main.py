@@ -9,5 +9,19 @@ def reaction_to_start(message:Message):
     bot.send_message(chat_id,f"Hello!")
 
 
+
+@bot.message_handler(commands=["/help"])
+def reaction_to_start(message:Message):
+    chat_id=message.chat.id
+    bot.send_message(chat_id,f"Siz yordam uchun adminga murojat qilishingiz mumkun!\n"
+                             f"adminga yozish uchun /admin komandasini yozing")
+
+
+@bot.message_handler(commands=["/admin"])
+def reaction_to_start(message:Message):
+    chat_id=message.chat.id
+    bot.send_message(chat_id,f"@User0242")
+
+
 if __name__=="__main__":
     bot.infinity_polling()
